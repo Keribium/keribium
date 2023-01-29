@@ -6,3 +6,6 @@ kb_venv
 
 # .pyc
 *.pyc
+
+# database files
+db.sqlite3
