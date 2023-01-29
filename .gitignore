@@ -1,6 +1,8 @@
 # Virtual Environments
-
 kb_venv
 
 # VSCode Configs
 .vscode
+
+# .pyc
+*.pyc
