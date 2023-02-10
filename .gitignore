@@ -9,3 +9,6 @@ kb_venv
 
 # database files
 db.sqlite3
+
+# tmp folder
+/tmp
