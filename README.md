@@ -1,13 +1,14 @@
 
 # Keribium
 
-<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white">
-<img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white">
-<img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white">
-<img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white">
-<img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=for-the-badge">
-<img src="https://img.shields.io/github/license/Keribium/keribium.svg?style=for-the-badge">
-<img src="https://img.shields.io/github/issues/Keribium/keribium.svg?style=for-the-badge">
+![](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
+![](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+![](https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
+![](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)
+![](https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=for-the-badge)
+![](https://img.shields.io/github/license/Keribium/keribium.svg?style=for-the-badge)
+![](https://img.shields.io/github/issues/Keribium/keribium.svg?style=for-the-badge)
 
 ## Dive into the World of the Dark Web with Keribium
 
