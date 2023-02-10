@@ -21,9 +21,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 
-SECRET_KEY = os.environ["SECRET_KEY"]
-
-
 # Application definition
 
 INSTALLED_APPS = [
