@@ -4,7 +4,7 @@ from .base import *
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-SECRET_KEY = "django-dev-env-test-secrey-key"
+
 
 ALLOWED_HOSTS = ["*"]
 
