@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "rest_framework",
     "rest_framework_simplejwt",
+    "base",
 ]
 
 MIDDLEWARE = [
@@ -61,7 +62,10 @@ ROOT_URLCONF = "kerver.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [
+            os.path.join(BASE_DIR, "templates/"),
+            os.path.join(BASE_DIR, "templates/sections/"),
+            ],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
