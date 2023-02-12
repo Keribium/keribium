@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tailwind build ../static/css/tailwind.css -o ../static/css/style.css && cleancss -o ../static/css/style.min.css ../static/css/style.css",
-    "test": "echo \"Error: no test specified\" && exit 1"
+
+    "build": "tailwind build ../static/css/tailwind.css -o ../static/css/style.css && cleancss -o ../static/css/style.min.css ../static/css/style.css"
+
   },
   "keywords": [],
   "author": "",
@@ -15,4 +16,4 @@
     "clean-css-cli": "^5.6.2",
     "tailwindcss": "^3.2.6"
   }
-}
+  }

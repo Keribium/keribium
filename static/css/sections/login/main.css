@@ -1,0 +1,18 @@
+.head-container {
+    display: flex;
+}
+.head .heading {
+    color: var(--highlight-color);
+}
+.newuser {
+    color: var(--highlight-color);
+}
+.subheading, .sign-up {
+    color: var(--primary-color);
+}
+.logo-img {
+    width: 100vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("/static/img/logo-white.svg");
+}
