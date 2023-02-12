@@ -11,4 +11,7 @@ kb_venv
 db.sqlite3
 
 # tmp folder
-/tmp
+tmp
+
+# node_modules folders
+node_modules
