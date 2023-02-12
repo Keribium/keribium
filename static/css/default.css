@@ -1,0 +1,17 @@
+:root {
+  --background-color: #000;
+  --primary-color: #81ff33;
+  --secondary-color: #d1ff00;
+  --highlight-color: #fff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+h1 {
+  color: var(--highlight-color);
+}

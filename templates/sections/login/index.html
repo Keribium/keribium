@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% load static %} 
+{% block title %}Login{% endblock title %} 
+{% block stylesheet %}
+<link rel="stylesheet" href="{% static 'css/sections/login/main.css' %}" />
+{% endblock stylesheet %} {% block nav %}{% endblock nav %} {% block content %}
+<main>
+  <div class="head-container">
+    <div class="head">
+      <h1 class="heading">Keribium</h1>
+      <div class="subheading">
+        <h2 class="signin">Sign In</h2>
+        <h3 class="newuser">New User? <a class="sign-up" href="#">Sign up</a></h3>
+      </div>
+    </div>
+    <div class="logo-img"></div>
+  </div>
+</main>
+{% endblock content %}
