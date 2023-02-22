@@ -1,0 +1,20 @@
+import shutil
+
+
+def commit_lint() -> None:
+    """
+    Commit lint: Setup the commit lint setup
+
+    Arguments: None
+    Return: None
+    """
+
+    shutil.copy(scr="commit-msg", dst="./.git/hooks/")
+
+
+def main() -> None:
+    commit_lint()
+
+
+if __name__ == "__main__":
+    commit_lint()
