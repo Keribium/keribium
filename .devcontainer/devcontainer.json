@@ -14,7 +14,7 @@
 	"forwardPorts": [5000, 5432, 8000]
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "pip install --user -r requirements.txt",
+	"postCreateCommand": "python3 tools/setup",
 
 	// Configure tool-specific properties.
 	// "customizations": {},
