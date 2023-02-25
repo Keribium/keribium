@@ -9,7 +9,7 @@ def commit_lint() -> None:
     Return: None
     """
 
-    shutil.copy(scr="commit-msg", dst="./.git/hooks/")
+    shutil.copy(src="./tools/commit-msg", dst="./.git/hooks/")
 
 
 def main() -> None:

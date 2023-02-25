@@ -11,10 +11,10 @@
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// This can be used to network with other containers or the host.
-	"forwardPorts": [5000, 5432, 8000]
+	"forwardPorts": [5000, 5432, 8080],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "python3 tools/setup",
+	"postCreateCommand": "python3 /tools/setup"
 
 	// Configure tool-specific properties.
 	// "customizations": {},
