@@ -8,6 +8,7 @@ FROM mcr.microsoft.com/devcontainers/python:0-3.9
 # RUN su vscode -c "source /usr/local/share/nvm/nvm.sh && npm install -g <your-package-here>" 2>&1
 
 # [Optional] Uncomment this line to install global pip packages.
-# RUN pip3 install --no-cache-dir <your-package-here>
+# RUN pip3 install --no-cache-dir 
+RUN pip install virtualenv
 
 ENTRYPOINT ["./tools/setup.sh"]
