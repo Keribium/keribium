@@ -8,15 +8,13 @@ from django.utils import timezone
 
 
 class UserAccountManager(BaseUserManager):
-    def create_user(self, email, name, password=None, phone=None, profile_image=None):
+    def create_user(self, email, name, password=None):
         if not email:
             raise ValueError("Users must have an email address")
 
         user = self.model(
             email=self.normalize_email(email),
             name=name,
-            phone=phone,
-            profile_image=profile_image,
         )
 
         user.set_password(password)
@@ -45,12 +43,8 @@ class UserAccountManager(BaseUserManager):
 
 class UserAccount(AbstractBaseUser, PermissionsMixin):
     name = models.CharField(max_length=255)
-    weight = models.IntegerField(null=True)
     date_of_birth = models.DateField(null=True)
     email = models.EmailField(max_length=255, unique=True)
-    profile_image = models.URLField(max_length=300, null=True, blank=True)
-    phone = models.CharField(max_length=15, null=True, blank=True)
-    premium_at = models.DateTimeField(null=True, blank=True)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     is_admin = models.BooleanField(default=False)
