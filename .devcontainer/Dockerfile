@@ -1,22 +1,13 @@
 FROM mcr.microsoft.com/devcontainers/python:0-3.9
 
-ENV PYTHONUNBUFFERED 1
-
-# [Optional] If your requirements rarely change, uncomment this section to add them to the image.
-COPY requirements/requirements.txt /tmp/pip-tmp/
-RUN pip3 --disable-pip-version-check --no-cache-dir install -r /tmp/pip-tmp/requirements.txt \
-   && rm -rf /tmp/pip-tmp
-
-# Install nodejs
-RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - \
-    && apt-get install -y nodejs && npm install -g yarn | npm install
-
 # [Optional] Uncomment this section to install additional OS packages.
 # RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 #     && apt-get -y install --no-install-recommends <your-package-list-here>
 
+# [Optional] Uncomment this line to install global node packages.
+# RUN su vscode -c "source /usr/local/share/nvm/nvm.sh && npm install -g <your-package-here>" 2>&1
 
+# [Optional] Uncomment this line to install global pip packages.
+# RUN pip3 install --no-cache-dir <your-package-here>
 
-
-
-
+ENTRYPOINT ["./tools/setup.sh"]
