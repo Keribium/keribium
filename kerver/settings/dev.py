@@ -1,12 +1,10 @@
-from .base import *
+from pathlib import Path
 
-
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-
-
 ALLOWED_HOSTS = ["*"]
+
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases

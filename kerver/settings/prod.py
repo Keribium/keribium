@@ -1,10 +1,8 @@
-import os
-from .base import *
-
-
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+SECRET_KEY = os.environ["SECRET_KEY"]
+
+ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
 
 # HTTPS settings
 SESSION_COOKIE_SECURE = True

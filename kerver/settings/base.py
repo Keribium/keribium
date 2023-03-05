@@ -10,26 +10,19 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 import os
-import configparser
 from pathlib import Path
 
+from django.core.management.utils import get_random_secret_key
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
+# generate random secret key
+SECRET_KEY = get_random_secret_key()
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
-
-# PRODUCTION = False
-
-# if PRODUCTION:
-#     SECRET_KEY = os.environ["SECRET_KEY"]
-# else:
-#     SECRET_KEY = "django-dev-env-test-secrey-key"
-
-
-SECRET_KEY = os.environ["SECRET_KEY"]
 
 # Application definition
 
@@ -65,7 +58,7 @@ TEMPLATES = [
         "DIRS": [
             os.path.join(BASE_DIR, "templates/"),
             os.path.join(BASE_DIR, "templates/sections/"),
-            ],
+        ],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
