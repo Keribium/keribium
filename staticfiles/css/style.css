@@ -419,6 +419,10 @@ video {
   display: none;
 }
 
+.text-outline-1-primary-color {
+  -webkit-text-stroke: 1px #81ff33;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -513,66 +517,8 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.container {
-  width: 100%;
-}
-
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
-  }
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}
-
-.visible {
-  visibility: visible;
-}
-
-.collapse {
-  visibility: collapse;
-}
-
 .static {
   position: static;
-}
-
-.fixed {
-  position: fixed;
 }
 
 .absolute {
@@ -583,73 +529,157 @@ video {
   position: relative;
 }
 
-.sticky {
-  position: sticky;
+.float-right {
+  float: right;
+}
+
+.m-10 {
+  margin: 2.5rem;
+}
+
+.mx-10 {
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
 }
 
 .block {
   display: block;
 }
 
-.inline {
-  display: inline;
-}
-
 .flex {
   display: flex;
 }
 
-.table {
-  display: table;
+.h-full {
+  height: 100%;
 }
 
-.grid {
-  display: grid;
+.w-64 {
+  width: 16rem;
 }
 
-.contents {
-  display: contents;
+.w-screen {
+  width: 100vw;
 }
 
-.hidden {
-  display: none;
+.flex-col {
+  flex-direction: column;
 }
 
-.border-collapse {
-  border-collapse: collapse;
+.justify-center {
+  justify-content: center;
 }
 
-.transform {
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+.rounded-md {
+  border-radius: 0.375rem;
 }
 
 .border {
   border-width: 1px;
 }
 
-.text-center {
-  text-align: center;
+.border-2 {
+  border-width: 2px;
 }
 
-.font-sans {
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+.border-primary-color {
+  --tw-border-opacity: 1;
+  border-color: rgb(129 255 51 / var(--tw-border-opacity));
 }
 
-.text-9xl {
-  font-size: 8rem;
-  line-height: 1;
+.bg-secondary-color {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 255 0 / var(--tw-bg-opacity));
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+.object-right {
+  -o-object-position: right;
+     object-position: right;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-5 {
+  padding: 1.25rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.py-7 {
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.font-clash-display-medium {
+  font-family: Clash Display Medium;
+}
+
+.font-clash-display-regular {
+  font-family: Clash Display Regular;
+}
+
+.font-clash-display-semi-bold {
+  font-family: Clash Display Semi Bold;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .uppercase {
   text-transform: uppercase;
 }
 
-.outline {
-  outline-style: solid;
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
-.filter {
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+.text-primary-color {
+  --tw-text-opacity: 1;
+  color: rgb(129 255 51 / var(--tw-text-opacity));
+}
+
+.text-transparent {
+  color: transparent;
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.outline {
+  outline-style: solid;
 }
 
 .transition {
@@ -662,4 +692,30 @@ video {
 
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@font-face {
+  font-family: 'Clash Display Regular';
+
+  src: url('../fonts/ClashDisplay-Regular.ttf');
+
+  font-family: 'Clash Display Bold';
+
+  src: url('../fonts/ClashDisplay-Bold.ttf');
+
+  font-family: 'Clash Display Extra Light';
+
+  src: url('../fonts/ClashDisplay-ExtraLight.ttf');
+
+  font-family: 'Clash Display Light';
+
+  src: url('../fonts/ClashDisplay-Light.ttf');
+
+  font-family: 'Clash Display Medium';
+
+  src: url('../fonts/ClashDisplay-Medium.ttf');
+
+  font-family: 'Clash Display Semi Bold';
+
+  src: url('../fonts/ClashDisplay-SemiBold.ttf');
 }

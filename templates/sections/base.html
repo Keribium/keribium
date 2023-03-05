@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{% block title %}Base Title{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/default.css'%}" />
-    <link rel="stylesheet" href="{% static 'css/style.min.css'%}" />
+    <link rel="stylesheet" href="{% static 'css/style.css'%}" />
     {% block stylesheet %}{% endblock stylesheet %}
   </head>
-  <body>
+  <body class="text-white font-clash-display-semi-bold">
     {% block nav %} {% endblock nav %} {% block content %}{% endblock content %}
   </body>
 </html>
