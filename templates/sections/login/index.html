@@ -8,7 +8,7 @@
     <div class="w-screen m-10 p-5">
       <h1 class="text-2xl py-7">Keribium</h1>
       <div class="">
-        <h2 class="text-transparent text-outline-1-primary-color text-4xl py-3">Sign In</h2>
+        <h2 class="text-transparent text-outline-1-primary-color text-4xl py-3" id="signin">Sign In</h2>
         <h3 class="font-clash-display-regular">New User? <a class="text-primary-color" href="#">Sign up</a></h3>
       </div>
     </div>
@@ -19,7 +19,7 @@
 
   <div class="flex w-screen justify-center ">
     <div class="w-screen mx-10 p-5">
-      <form action="login/" method="post">
+      <form action="/login/" method="post">
         {% csrf_token %}
         <div class="flex flex-col my-5">
           <input placeholder="example@gmail.com" type="text" name="username" id="username" class="border-2 border-primary-color rounded-md p-2 bg-transparent" />
@@ -28,12 +28,34 @@
           <input placeholder="password" type="password" name="password" id="password" class="border-2 border-primary-color rounded-md p-2 bg-transparent" />
         </div>
         <div class="flex">
-          <input type="submit" value="sign in --->" class="bg-secondary-color text-black font-clash-display-medium rounded-md p-2 px-2 w-64 text-left" />
+          <input type="submit" value="sign in" class="bg-secondary-color text-black font-clash-display-regular rounded-l-md p-2 w-auto text-left" />
+          <img src="{% static 'assets/line.svg' %}" alt="" srcset="" class="bg-secondary-color px-5 rounded-r-md">
         </div>
       </form>
     </div>
-    <div class="object-right w-screen">
+    
+    <div class="flex flex-col w-auto">
+      <div class=" h-[250px] min-h-[1em] w-px self-stretch bg-gradient-to-tr from-transparent via-neutral-500 to-transparent opacity-20 dark:opacity-100 m-auto"></div>
+      <div class="font-clash-display-semi-bold text-gray-500 py-4">OR</div>
+    </div>
+    
+    <div class="m-5 object-right w-screen">
+      <form action="/login/" method="post">
+        {% csrf_token %}
+        <div class="flex p-5">
+          <img src="{% static 'assets/github.svg' %}" alt="" srcset="" class="bg-secondary-color px-5">
+          <input type="submit" value="Sign in with Github" class="bg-secondary-color text-black font-clash-display-medium p-2 px-2 w-44 text-left" />
+        </div>
+      </form>
+      <form action="/login/" method="post">
+        {% csrf_token %}
+        <div class="flex p-5">
+          <img src="{% static 'assets/google.svg' %}" alt="" srcset="" class="bg-secondary-color px-5">
+          <input type="submit" value="Sign with Google" class="bg-secondary-color text-black font-clash-display-medium p-2 px-2 w-44 text-left" />
+        </div>
+      </form>
       
     </div>
+  </div>
 </main>
 {% endblock content %}
