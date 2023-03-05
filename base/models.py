@@ -48,6 +48,18 @@ class UserAccount(AbstractBaseUser, PermissionsMixin):
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     is_admin = models.BooleanField(default=False)
+    user_permissions = models.ManyToManyField(
+        "auth.Permission",
+        blank=True,
+        related_name="user_permission_set",
+        related_query_name="user",
+    )
+    groups = models.ManyToManyField(
+        "auth.Group",
+        blank=True,
+        related_name="user_gropus_set",
+        related_query_name="user",
+    )
 
     objects = UserAccountManager()
 
@@ -67,6 +79,3 @@ class UserAccount(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self) -> str:
         return self.email
-
-
-
