@@ -19,5 +19,8 @@ node_modules
 # .env files
 .env
 
+# static files
+staticfiles/**/*
+
 # migrations
 migrations
