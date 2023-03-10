@@ -1,15 +1,15 @@
 {% extends 'base.html' %} {% load static %} 
 {% block title %}Login{% endblock title %} 
 {% block stylesheet %}
-<link rel="stylesheet" href="{% static 'css/sections/login/main.css' %}" />
+<link rel="stylesheet" href="{% static 'css/sections/register/main.css' %}" />
 {% endblock stylesheet %} {% block nav %}{% endblock nav %} {% block content %}
 <main>
   <div class="flex w-screen justify-center ">
     <div class="w-screen m-10 p-5">
       <h1 class="text-2xl py-7">Keribium</h1>
       <div class="">
-        <h2 class="text-transparent text-outline-1-primary-color text-4xl py-3" id="signin">Sign In</h2>
-        <h3 class="font-clash-display-regular">New User? <a class="text-primary-color" href="/register/">Sign up</a></h3>
+        <h2 class="text-transparent text-outline-1-primary-color text-4xl py-3" id="signin">Sign Up</h2>
+        <h3 class="font-clash-display-regular">Already a User? <a class="text-primary-color" href="/login/">Sign In</a></h3>
       </div>
     </div>
     <div class="w-screen">
@@ -19,16 +19,23 @@
 
   <div class="flex w-screen justify-center ">
     <div class="w-screen mx-10 p-5">
-      <form action="/api/login/" method="post">
+      <form action="/api/register/" method="post">
         {% csrf_token %}
+
+        <div class="flex flex-col my-5">
+          <input placeholder="username" type="text" name="name" id="email" class="border-2 border-primary-color rounded-md p-2 bg-transparent" />
+        </div>
         <div class="flex flex-col my-5">
           <input placeholder="example@gmail.com" type="text" name="email" id="email" class="border-2 border-primary-color rounded-md p-2 bg-transparent" />
         </div>
         <div class="flex flex-col my-5">
           <input placeholder="password" type="password" name="password" id="password" class="border-2 border-primary-color rounded-md p-2 bg-transparent" />
         </div>
+        <div class="flex flex-col my-5">
+          <input placeholder="confirm password" type="password" name="confirm_password" id="confirm_password" class="border-2 border-primary-color rounded-md p-2 bg-transparent" />
+        </div>
         <div class="flex">
-          <input type="submit" value="sign in" class="bg-secondary-color text-black font-clash-display-regular rounded-l-md p-2 w-auto text-left" />
+          <input type="submit" value="sign up" class="bg-secondary-color text-black font-clash-display-regular rounded-l-md p-2 w-auto text-left" />
           <img src="{% static 'assets/line.svg' %}" alt="" srcset="" class="bg-secondary-color px-5 rounded-r-md">
         </div>
       </form>
