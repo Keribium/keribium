@@ -36,7 +36,7 @@ Keribium requires an internet connection and a modern web browser to work at its
 
 ## Your Feedback Matters
 
-We want to make sure that your experience with Keribium is nothing short of exceptional. If you encounter any issues or have any suggestions, our support team is always ready to help at [insert email]. Your feedback is important to us, and we are dedicated to providing the best possible platform for exploring the dark web.
+We want to make sure that your experience with Keribium is nothing short of exceptional. If you encounter any issues or have any suggestions, our support team is always ready to help at keribium.official@gmail.com. Your feedback is important to us, and we are dedicated to providing the best possible platform for exploring the dark web.
 
 ## Conclusion
 
