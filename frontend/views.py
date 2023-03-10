@@ -10,7 +10,7 @@ def login_index(request):
 
 
 def register_index(request):
-    pass
+    return render(request, "register/index.html")
 
 
 def error_404(request):

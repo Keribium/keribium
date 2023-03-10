@@ -55,6 +55,14 @@ class RegisterAPIView(APIView):
     def post(self, request):
         try:
             data = request.data
+            if data["password"] != data["confirm_password"]:
+                return Response(
+                    {
+                        "message": "Something went wrong",
+                        "errors": "Password and confirm password do not match",
+                    },
+                    status=status.HTTP_401_UNAUTHORIZED,
+                )
             serializer = UserRegisterSerializer(data=data)
             if serializer.is_valid():
                 user = serializer.save()
