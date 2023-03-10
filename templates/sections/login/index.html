@@ -19,10 +19,10 @@
 
   <div class="flex w-screen justify-center ">
     <div class="w-screen mx-10 p-5">
-      <form action="/login/" method="post">
+      <form action="/api/login/" method="post">
         {% csrf_token %}
         <div class="flex flex-col my-5">
-          <input placeholder="example@gmail.com" type="text" name="username" id="username" class="border-2 border-primary-color rounded-md p-2 bg-transparent" />
+          <input placeholder="example@gmail.com" type="text" name="email" id="email" class="border-2 border-primary-color rounded-md p-2 bg-transparent" />
         </div>
         <div class="flex flex-col my-5">
           <input placeholder="password" type="password" name="password" id="password" class="border-2 border-primary-color rounded-md p-2 bg-transparent" />
