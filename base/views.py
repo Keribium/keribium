@@ -1,10 +1,11 @@
 from django.contrib.auth import authenticate
-from django.shortcuts import render
 from rest_framework import status
-from rest_framework.decorators import api_view
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
-from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework.views import APIView
+from rest_framework_simplejwt.token_blacklist.models import (BlacklistedToken,
+                                                             OutstandingToken)
+from rest_framework_simplejwt.tokens import RefreshToken
 
 from .serializers import UserLoginSerializer, UserRegisterSerializer
 
@@ -16,6 +17,21 @@ def get_tokens_for_user(user):
         "refresh": str(refresh),
         "access": str(refresh.access_token),
     }
+
+
+class APILogoutView(APIView):
+    permission_classes = (IsAuthenticated,)
+
+    def post(self, request, *args, **kwargs):
+        if self.request.data.get("all"):
+            token: OutstandingToken
+            for token in OutstandingToken.objects.filter(user=request.user):
+                _, _ = BlacklistedToken.objects.get_or_create(token=token)
+            return Response({"message": "OK, goodbye, all refresh tokens blacklisted"}, status=status.HTTP_200_OK)
+        refresh_token = self.request.data.get("refresh_token")
+        token = RefreshToken(token=refresh_token)
+        token.blacklist()
+        return Response({"message": "OK, goodbye"}, status=status.HTTP_200_OK)
 
 
 class LoginAPIView(APIView):
