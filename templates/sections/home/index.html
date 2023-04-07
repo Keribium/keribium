@@ -2,6 +2,67 @@
 {% block title %}Login{% endblock title %} 
 {% block stylesheet %}
 <link rel="stylesheet" href="{% static 'css/sections/home/main.css' %}" />
-{% endblock stylesheet %} {% block nav %}{% endblock nav %} {% block content %}
-Hello, world!
+{% endblock stylesheet %}
+{% block content %}
+<section class="w-full h-screen bg-center bg-cover" style="background-image:url({% static 'img/landing.png' %})"></section>
+
+<script src="{% static 'js/sections/home/main.js' %}"></script>
+
+{% comment %} About Us section {% endcomment %}
+<div class="container px-10">
+    <h1 class="text-9xl text-left text-[D9D9D9] opacity-10 absolute" id="about">ABOUT US</h1>
+    <h2 class="text-primary-color text-6xl p-10 drop-shadow-[0_0px_15px_rgba(129,255,51,0.7)]">ABOUT US</h2>
+</div>
+
+<div class="container max-w-3xl text-base p-10 space-y-5">
+    <p> 
+        Keribium is an application which allows users to access websites from the dark web on the surface web.
+    </p>
+    <p> 
+        For more information refer to our <a class="text-primary-color hover:underline"href="https://github.com/Keribium" target="_blank">Github page.</a> 
+    </p>
+</div>
+
+{% comment %} FAQs Section {% endcomment %}
+<div class="container px-10">
+    <h1 class="text-9xl text-left text-[D9D9D9] opacity-10 absolute" id="faqs">FAQs</h1>
+    <h2 class="text-primary-color text-6xl p-10 drop-shadow-[0_0px_15px_rgba(129,255,51,0.7)]">FAQs</h2>
+</div>
+<!-- component -->
+<div>
+    <section class="text-gray-700">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
+          <div class="w-full lg:w px-4 py-2">
+            {% for faq in faqs %}
+            <details class="mb-4">
+              <summary class="font-semibold  bg-secondary-color py-2 px-4">
+                {{ faq.question }}
+              </summary>
+
+              <span class="px-4 py-2 text-white">
+                {{ faq.answer }}
+              </span>
+            </details>
+            {% endfor %}
+          </div>
+          {% comment %} <div class="w-full lg:w-1/2 px-4 py-2">
+          </div> {% endcomment %}
+        </div>
+      </div>
+    </section>
+  </div>
+
+{% comment %} Forums Section {% endcomment %}
+<div class="container px-10">
+    <h1 class="text-9xl text-left text-[D9D9D9] opacity-10 absolute" id="forums">Forums</h1>
+    <h2 class="text-primary-color text-6xl p-10 drop-shadow-[0_0px_15px_rgba(129,255,51,0.7)]">Forums</h2>
+</div>
+
+{% comment %} Websites Section {% endcomment %}
+<div class="container px-10">
+    <h1 class="text-9xl text-left text-[D9D9D9] opacity-10 absolute" id="websites">Websites</h1>
+    <h2 class="text-primary-color text-6xl p-10 drop-shadow-[0_0px_15px_rgba(129,255,51,0.7)]">Websites</h2>
+</div>
+
 {% endblock content %}
