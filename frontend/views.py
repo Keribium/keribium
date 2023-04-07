@@ -1,8 +1,14 @@
 from django.shortcuts import render
+import json
+import yaml
 
+def profile(request):
+    return render(request, "profile/index.html")
 
 def index(request):
-    return render(request, "home/index.html")
+
+    context = yaml.load(open("static/yaml/faqs.yaml", "r"), Loader=yaml.FullLoader)
+    return render(request, "home/index.html", context=context)
 
 
 def login_index(request):
