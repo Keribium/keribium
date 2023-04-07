@@ -24,3 +24,6 @@ staticfiles/**/*
 
 # migrations
 migrations
+
+# .DS_Store
+.DS_Store
