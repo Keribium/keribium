@@ -10,8 +10,8 @@
 
 {% comment %} About Us section {% endcomment %}
 <div class="container px-10">
-    <h1 class="text-9xl text-left text-[D9D9D9] opacity-10 absolute" id="about">ABOUT US</h1>
-    <h2 class="text-primary-color text-6xl p-10 drop-shadow-[0_0px_15px_rgba(129,255,51,0.7)]">ABOUT US</h2>
+    <h1 class="text-9xl text-left text-[D9D9D9] opacity-10 absolute" id="about">About Us</h1>
+    <h2 class="text-primary-color text-6xl p-10 drop-shadow-[0_0px_15px_rgba(129,255,51,0.7)]">About Us</h2>
 </div>
 
 <div class="container max-w-3xl text-base p-10 space-y-5">
@@ -23,46 +23,79 @@
     </p>
 </div>
 
-{% comment %} FAQs Section {% endcomment %}
-<div class="container px-10">
-    <h1 class="text-9xl text-left text-[D9D9D9] opacity-10 absolute" id="faqs">FAQs</h1>
-    <h2 class="text-primary-color text-6xl p-10 drop-shadow-[0_0px_15px_rgba(129,255,51,0.7)]">FAQs</h2>
-</div>
-<!-- component -->
-<div>
-    <section class="text-gray-700">
-      <div class="container px-5 py-24 mx-auto">
-        <div class="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
-          <div class="w-full lg:w px-4 py-2">
-            {% for faq in faqs %}
-            <details class="mb-4">
-              <summary class="font-semibold  bg-secondary-color py-2 px-4">
-                {{ faq.question }}
-              </summary>
-
-              <span class="px-4 py-2 text-white">
-                {{ faq.answer }}
-              </span>
-            </details>
-            {% endfor %}
-          </div>
-          {% comment %} <div class="w-full lg:w-1/2 px-4 py-2">
-          </div> {% endcomment %}
-        </div>
-      </div>
-    </section>
-  </div>
-
 {% comment %} Forums Section {% endcomment %}
 <div class="container px-10">
-    <h1 class="text-9xl text-left text-[D9D9D9] opacity-10 absolute" id="forums">Forums</h1>
-    <h2 class="text-primary-color text-6xl p-10 drop-shadow-[0_0px_15px_rgba(129,255,51,0.7)]">Forums</h2>
+  <h1 class="text-9xl text-left text-[D9D9D9] opacity-10 absolute" id="about">Forums</h1>
+  <h2 class="text-primary-color text-6xl p-10 drop-shadow-[0_0px_15px_rgba(129,255,51,0.7)]">Forums</h2>
+</div>
+
+{% comment %} Search Bar {% endcomment %}
+
+<div class="container max-w-2xl text-base px-10 space-y-5">
+    <p> 
+      Need help? We've got answers! Search, browse, or ask a question.
+    </p>
+    <div class="flex flex-col">
+      <form action="/#forums" method="GET" class="w-full p-2 rounded-md">
+        {% csrf_token %}
+          <div class="flex flex-row drop-shadow-[0_0px_2px_rgba(225,225,225,1)]">
+                <input type="text" id="search" class="w-full p-2 rounded-l-md bg-background-color focus:outline-none" placeholder="Search the community">
+                <button class="bg-background-color text-white p-2 rounded-r-md" type="submit">Search</button>
+          </div>
+      </form>
+    </div>
+
+    <div class="grid grid-cols-2 gap-8 sm:gap-8 sm:grid-cols-4">
+    {% if forum_results %}
+    {% for result in forum_results %}
+    <div class="max-w-sm p-6 bg-white rounded-lg shadow dark:bg-gray-900 dark:border-gray-700">
+      <a href="#">
+          <h5 class="mb-2 text-xl font-thin tracking-tight dark:text-gray-400">{{result.title}}</h5>
+      </a>
+      <p class="mb-3 font-normal text-gray-500">{{result.detail}}</p>
+      <a href="#" class="inline-flex items-center px-3 py-2 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+          Read more
+          <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+      </a>
+    </div>
+    {% endfor %}
+    {% endif %}
+</div>
 </div>
 
 {% comment %} Websites Section {% endcomment %}
 <div class="container px-10">
     <h1 class="text-9xl text-left text-[D9D9D9] opacity-10 absolute" id="websites">Websites</h1>
     <h2 class="text-primary-color text-6xl p-10 drop-shadow-[0_0px_15px_rgba(129,255,51,0.7)]">Websites</h2>
+</div>
+
+{% comment %} FAQs Section {% endcomment %}
+<div class="container px-10">
+  <h1 class="text-9xl text-left text-[D9D9D9] opacity-10 absolute" id="faqs">FAQs</h1>
+  <h2 class="text-primary-color text-6xl p-10 drop-shadow-[0_0px_15px_rgba(129,255,51,0.7)]">FAQs</h2>
+</div>
+
+<div>
+  <section class="">
+    <div class="container px-5 py-12 mx-auto">
+      <div class="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
+        <div class="w-full lg:w px-4 py-2">
+          {% for faq in faqs %}
+          <details class="mb-4">
+            <summary class="font-semibold py-5 px-4 text-gray-400 bg-gray-900 border-gray-200 rounded-lg dark:border-gray-700">
+              {{ faq.question }}
+            </summary>
+            <span class="px-4 py-2 text-gray-300">
+              {{ faq.answer }}
+            </span>
+          </details>
+          {% endfor %}
+        </div>
+        {% comment %} <div class="w-full lg:w-1/2 px-4 py-2">
+        </div> {% endcomment %}
+      </div>
+    </div>
+  </section>
 </div>
 
 {% endblock content %}
