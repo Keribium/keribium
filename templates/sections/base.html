@@ -12,16 +12,20 @@
   </head>
   <body class="text-white font-clash-display-semi-bold">
     {% block nav %} 
-    <nav class="sticky top-0 ">
-      <div class=" mx-auto flex justify-between bg-white bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60 border border-gray-200" id="navbar">
-        <a href="/" class="flex items-center py-4 px-3 text-black no-underline">
-          <span class="font-bold tracking-tight text-sm px-10">Keribium</span>
-        </a>
-        <img src="{% static 'img/logo-white.svg' %}" alt="logo" class="w-20 m-0 p-0"/>
+    <nav class="sticky top-0">
+      <div class=" mx-auto flex justify-between bg-white bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60 " id="navbar">
+        <div class="h-max px-5 m-0 flex">
+          <div class="h-max m-0 ">
+            <img src="{% static 'img/logo-white.svg' %}" alt="logo" class="w-20"/>
+          </div>
+          <a href="/" class="flex items-center py-4 text-black no-underline">
+            <span class="font-bold tracking-tight text-sm px-10">Keribium</span>
+          </a>
+        </div>
         <div class="py-4 px-12 text-white flex items-center">
           <a href="/#" class="no-underline hover:underline text-black p-3 text-xs">Wiki</a>
-          <a href="/#" class="no-underline hover:underline text-black p-3 text-xs">Forums</a>
           <a href="/#" class="no-underline hover:underline text-black p-3 text-xs">Websites</a>
+          <a href="/#" class="no-underline hover:underline text-black p-3 text-xs">Forums</a>
           
           <div class=" h-[25px] min-h-[1em] w-px self-stretch bg-gradient-to-tr from-transparent via-neutral-500 to-transparent m-auto"></div>
 
@@ -51,9 +55,9 @@
                 <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">Keribium</span>
             </a>
         </div>
-        <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+        <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 text-xs">
             <div>
-                <h2 class="mb-6 text-sm font-semibold uppercase text-white">Resources</h2>
+                <h2 class="mb-6 font-semibold uppercase text-white">Resources</h2>
                 <ul class=" text-gray-400 font-medium">
                     <li class="mb-4">
                         <a href="https://github.com/Keribium" class="hover:underline">Github</a>
@@ -64,7 +68,7 @@
                 </ul>
             </div>
             <div>
-                <h2 class="mb-6 text-sm font-semibold uppercase text-white">Follow us</h2>
+                <h2 class="mb-6 font-semibold uppercase text-white">Follow us</h2>
                 <ul class=" text-gray-400 font-medium">
                     <li class="mb-4">
                         <a href="https://github.com/Keribium" class="hover:underline ">Github</a>
@@ -75,8 +79,8 @@
                 </ul>
             </div>
             <div>
-                <h2 class="mb-6 text-sm font-semibold  uppercase text-white">Legal</h2>
-                <ul class="text-gray-400 font-medium">
+                <h2 class="mb-6 font-semibold  uppercase text-white">Legal</h2>
+                <ul class="text-gray-400 font-medium text-xs">
                     <li class="mb-4">
                         <a href="#" class="hover:underline">Privacy Policy</a>
                     </li>
