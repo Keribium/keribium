@@ -1,10 +1,47 @@
 from django.shortcuts import render
-import json
 import yaml
 
 
 def profile(request):
-    return render(request, "profile/index.html")
+    context = {
+        "user": {
+            "name": "Khushiyant",
+            "bio": "Research Intern, Germany | Research Assistant, NTNU, Norway | Remote Developer | Building @Keribium | OpenSource Developer @zulip @unifyai | SIH’22 Winner",
+        },
+        "bookmarks": [
+            {
+                "title": "test",
+                "description": "dfsdfsdfsdfvdsfdfbsdvsdvsd",
+                "url": "https://www.google.com",
+            },
+            {
+                "title": "test2",
+                "description": "dfsdfsdfsdfvdsfdfbsdvsdvsd",
+                "url": "https://www.google.com",
+            },
+            {
+                "title": "test",
+                "description": "dfsdfsdfsdfvdsfdfbsdvsdvsd",
+                "url": "https://www.google.com",
+            },
+            {
+                "title": "test2",
+                "description": "dfsdfsdfsdfvdsfdfbsdvsdvsd",
+                "url": "https://www.google.com",
+            },
+            {
+                "title": "test",
+                "description": "dfsdfsdfsdfvdsfdfbsdvsdvsd",
+                "url": "https://www.google.com",
+            },
+            {
+                "title": "test2",
+                "description": "dfsdfsdfsdfvdsfdfbsdvsdvsd",
+                "url": "https://www.google.com",
+            }
+        ]
+    }
+    return render(request, "profile/index.html", context=context)
 
 
 def index(request):
