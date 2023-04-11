@@ -1,7 +1,44 @@
 {% extends 'base.html' %} {% load static %} 
-{% block title %}Login{% endblock title %} 
+{% block title %}Profile{% endblock title %} 
 {% block stylesheet %}
 <link rel="stylesheet" href="{% static 'css/sections/profile/main.css' %}" />
 {% endblock stylesheet %}
 {% block content %}
+
+<div class="grid grid-cols-2">
+    <div class="p-10 max-h-screen overflow-y-auto">
+        <h1 class="text-2xl font-bold pb-5">Bookmarks</h1>
+        <hr class="opacity-30">
+        {% if bookmarks %}
+        {% for bookmark in bookmarks %}
+        <div class="flex my-3 bg-gray-800 rounded-lg border-none justify-between">
+            <div class="flex flex-col items-start p-5 my-3">
+                <h1 class="text-xl font-bold">{{bookmark.title}}</h1>
+                <p class="text-sm text-gray-500">{{bookmark.description}}</p>
+                <a href="{{bookmark.url}}" class="text-sm text-primary-color hover:underline py-5">Visit</a>
+            </div>
+            <div class="h-full">
+                <img src="{% static 'img/logo-white.svg' %}" alt="profile" class="h-full  drop-shadow-md" />
+            </div>
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+    <div class="bg-primary-color p-10 border-0 border-none min-h-screen max-h-screen">
+        <div class="flex flex-col items-start">
+            <div class="flex justify-center items-center space-x-2">
+                <img src="{% static 'img/avatar/demon.svg' %}" alt="profile" class="w-20 h-20 object-cover drop-shadow-md" />
+                <a href="/#" class="text-sm hover:underline py-5">
+                    <svg class="h-5 w-5 text-black"  viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M9 7 h-3a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-3" />  <path d="M9 15h3l8.5 -8.5a1.5 1.5 0 0 0 -3 -3l-8.5 8.5v3" />  <line x1="16" y1="5" x2="19" y2="8" /></svg>                    
+                </a>
+            </div>
+            <h1 class="text-lg font-bold py-3 text-black">{{user.name}}</h1>
+            <p class="text-sm text-gray-400">{{user.bio}}</p>
+        </div>
+    </div>
+</div>
+
+
 {% endblock content %}
+{% block footer %}
+{% endblock footer %}
