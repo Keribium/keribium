@@ -28,8 +28,9 @@
           <input placeholder="password" type="password" name="password" id="password" class="border-2 border-primary-color rounded-md p-2 bg-transparent" />
         </div>
         <div class="flex">
-          <input type="submit" value="sign in" class="bg-secondary-color text-black font-clash-display-regular rounded-l-md p-2 w-auto text-left" />
-          <img src="{% static 'assets/line.svg' %}" alt="" srcset="" class="bg-secondary-color px-5 rounded-r-md">
+          <button type="submit" value="sign in" class="bg-secondary-color text-black flex items-center font-clash-display-regular rounded-md p-2 w-auto text-left">sign in
+            <img src="{% static 'assets/line.svg' %}" alt="" srcset="" class="bg-secondary-color px-5 ">
+          </button>
         </div>
       </form>
     </div>
@@ -43,15 +44,17 @@
       <form action="/login/" method="post">
         {% csrf_token %}
         <div class="flex p-5">
-          <img src="{% static 'assets/github.svg' %}" alt="" srcset="" class="bg-secondary-color px-5">
-          <input type="submit" value="Sign in with Github" class="bg-secondary-color text-black font-clash-display-medium p-2 px-2 w-44 text-left" />
+          <button type="submit" value="Sign in with Github" class="bg-secondary-color text-black flex items-center font-clash-display-medium p-2 w-48 text-left" >
+            <img src="{% static 'assets/github.svg' %}" alt="" srcset="" class="bg-secondary-color px-5">
+            Sign in with Google </button>
         </div>
       </form>
       <form action="/login/" method="post">
         {% csrf_token %}
         <div class="flex p-5">
-          <img src="{% static 'assets/google.svg' %}" alt="" srcset="" class="bg-secondary-color px-5">
-          <input type="submit" value="Sign with Google" class="bg-secondary-color text-black font-clash-display-medium p-2 px-2 w-44 text-left" />
+          <button type="submit" value="Sign in with Google" class="bg-secondary-color text-black flex items-center font-clash-display-medium p-2 w-48 text-left" >
+            <img src="{% static 'assets/google.svg' %}" alt="" srcset="" class="bg-secondary-color px-5 ">
+            Sign in with Github </button>
         </div>
       </form>
       
@@ -59,3 +62,4 @@
   </div>
 </main>
 {% endblock content %}
+{% block footer %}{% endblock footer %}
