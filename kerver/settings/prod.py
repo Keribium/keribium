@@ -15,3 +15,15 @@ SECURE_SSL_REDIRECT = True
 SECURE_HSTS_SECONDS = 31536000  # 1 year
 SECURE_HSTS_PRELOAD = True
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+
+# Database
+DATABASES = {
+   'default': {
+       'ENGINE': 'django.db.backends.postgresql',
+       'NAME': os.getenv('DB_NAME'),
+       'USER': os.getenv('DB_USER'),
+       'PASSWORD': os.getenv('DB_PASSWORD'),
+       'HOST': os.getenv('DB_HOST'),
+       'PORT': os.getenv('DB_PORT'),
+   }
+}
